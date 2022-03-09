@@ -1,0 +1,51 @@
+@import '__mixins'; 
+/* Increase of the width occupied by the cards to keep the design in rows for a long time */
+@media screen and (max-width : 750px) {
+    .three_cards {
+        width: 95%;
+    }
+}
+/*  Switching from row to column design with flexbox to conform to devices 
+    changing the card measurements so that the height is always greater than the width
+    change the padding size of the components on each card to match the new design
+    change the location of the borders on cards 1 and 3 since the layout has been changed 
+    */
+@media screen and (max-width : 600px) {
+    .three_cards {
+        flex-direction: column;
+        height: 100%;
+        margin: 40px auto;
+        width: 60%;
+    }
+
+    .car_card {
+        width: 100%;
+        height: 400px;
+    }
+
+    p, h1, img{
+        padding-left: 35px;
+    }
+    .car_card p {
+        min-height: 150px;
+        
+    }
+    .sedans_card {
+         border-radius: 10px 10px 0px  0px ;
+    }
+    
+        
+    .luxury_card {
+        border-radius: 0px 0px 10px 10px;
+    }
+    button {
+        margin-left: 35px;
+    }
+    
+}
+/* We give a larger width to match the design on small devices*/
+@media screen and (max-width : 450px) {
+    .three_cards {
+        width: 80%;
+    }
+}

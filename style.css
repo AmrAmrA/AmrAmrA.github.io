@@ -1,0 +1,175 @@
+/* Gathering of all the colors used during the challenge */
+img {
+  width: 70px;
+  height: auto;
+}
+
+body {
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* global design to perfectly center the items */
+/* global design for the title of each car offer */
+/* overall design for the description of each offer */
+/* overall design for each inquiry button  */
+/* design for hoover animation on each button   */
+/* Helps us to perfectly center the three cards with flexbox and give them their height and width */
+.three_cards {
+  width: 80%;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/*  Global design for every card and its children with Sass Nesting */
+.car_card {
+  width: 275px;
+  height: 450px;
+  padding-left: 20px;
+}
+.car_card .car_image {
+  padding-top: 20px;
+}
+.car_card h1 {
+  font-family: "Big Shoulders Display";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.car_card p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  margin-right: 20px;
+  min-height: 200px;
+  font-family: "lexend deca", sans-serif;
+}
+.car_card button {
+  text-align: center;
+  font-family: "lexend deca", sans-serif;
+  font-size: 14px;
+  width: 150px;
+  padding: 15px 15px;
+  border-radius: 99990px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+/*  Design of the specificities of each card with its colors, its borders and its hoover animation. 
+    Always using Sass Nesting for the hoover effect */
+.sedans_card {
+  background-color: #e38826;
+  border-radius: 10px 0 0 10px;
+}
+.sedans_card .sedans_button {
+  color: #e38826;
+}
+.sedans_card .sedans_button:hover {
+  background-color: #e38826;
+  color: white;
+  border: 2px solid white;
+}
+
+.suvs_card {
+  background-color: #006970;
+}
+.suvs_card .suvs_button {
+  color: #006970;
+}
+.suvs_card .suvs_button:hover {
+  background-color: #006970;
+  color: white;
+  border: 2px solid white;
+}
+
+.luxury_card {
+  background-color: #004241;
+  border-radius: 0 10px 10px 0;
+}
+.luxury_card .luxury_button {
+  color: #004241;
+}
+.luxury_card .luxury_button:hover {
+  background-color: #004241;
+  color: white;
+  border: 2px solid white;
+}
+
+/* Some design for the footer and the links to the plateform site and my github */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+footer {
+  margin-bottom: 20px;
+}
+
+/* Import of the breakpoints for the responsive design on different devices */
+/* global design to perfectly center the items */
+/* global design for the title of each car offer */
+/* overall design for the description of each offer */
+/* overall design for each inquiry button  */
+/* design for hoover animation on each button   */
+/* Increase of the width occupied by the cards to keep the design in rows for a long time */
+@media screen and (max-width: 750px) {
+  .three_cards {
+    width: 95%;
+  }
+}
+/*  Switching from row to column design with flexbox to conform to devices 
+    changing the card measurements so that the height is always greater than the width
+    change the padding size of the components on each card to match the new design
+    change the location of the borders on cards 1 and 3 since the layout has been changed 
+    */
+@media screen and (max-width: 600px) {
+  .three_cards {
+    flex-direction: column;
+    height: 100%;
+    margin: 40px auto;
+    width: 60%;
+  }
+
+  .car_card {
+    width: 100%;
+    height: 400px;
+  }
+
+  p, h1, img {
+    padding-left: 35px;
+  }
+
+  .car_card p {
+    min-height: 150px;
+  }
+
+  .sedans_card {
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .luxury_card {
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  button {
+    margin-left: 35px;
+  }
+}
+/* We give a larger width to match the design on small devices*/
+@media screen and (max-width: 450px) {
+  .three_cards {
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

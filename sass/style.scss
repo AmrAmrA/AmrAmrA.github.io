@@ -1,0 +1,81 @@
+@import '__variables'; 
+@import '__basicReset';
+@import '__mixins'; 
+
+/* Helps us to perfectly center the three cards with flexbox and give them their height and width */
+.three_cards {
+    width: 80%;
+    height: 650px;
+    @include centerElements;
+}
+/*  Global design for every card and its children with Sass Nesting */
+.car_card {
+    width: 275px;
+    height: 450px;
+    padding-left: 20px;
+    
+    .car_image {
+        padding-top: 20px;
+    }
+
+    h1 {
+        @include titleStyle; 
+    }
+    
+    p {
+       @include paragrapheStyle;
+    }
+    
+    button {
+        @include buttonDesign;
+    }
+}
+/*  Design of the specificities of each card with its colors, its borders and its hoover animation. 
+    Always using Sass Nesting for the hoover effect */
+.sedans_card {
+    background-color: $sedans_color;
+    border-radius: 10px 0 0 10px;
+
+    .sedans_button{
+        color: $sedans_color;
+    
+        &:hover {
+            background-color: $sedans_color;
+            @include hoverEffect;
+        }
+    }
+}
+
+.suvs_card {
+    background-color: $suvs_color;
+
+    .suvs_button {
+        color: $suvs_color;
+        &:hover {
+            background-color: $suvs_color;
+            @include hoverEffect;
+           }
+    }
+}
+
+.luxury_card {
+    background-color: $luxury_color;
+    border-radius: 0 10px 10px 0;
+    
+    .luxury_button{
+        color: $luxury_color;
+        &:hover {
+         background-color: $luxury_color;
+         @include hoverEffect; 
+        }
+    }
+}
+
+/* Some design for the footer and the links to the plateform site and my github */
+.attribution { font-size: 11px; text-align: center; }
+footer {
+    margin-bottom: 20px
+}
+
+/* Import of the breakpoints for the responsive design on different devices */
+@import '__breakpoints'; 

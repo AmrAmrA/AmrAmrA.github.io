@@ -1,0 +1,43 @@
+/* global design to perfectly center the items */
+@mixin centerElements {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+}
+
+/* global design for the title of each car offer */
+@mixin titleStyle {
+        font-family: 'Big Shoulders Display';
+        text-transform: uppercase;
+        letter-spacing: 2px; 
+}
+
+/* overall design for the description of each offer */
+@mixin paragrapheStyle  {
+        color: $paragraph_color;
+        line-height: 1.6;
+        margin-right: 20px;
+        min-height: 200px;
+        font-family: 'lexend deca', sans-serif;
+}
+
+/* overall design for each inquiry button  */
+@mixin buttonDesign {
+        text-align: center;
+        font-family: 'lexend deca', sans-serif;
+        font-size: 14px;
+        width: 150px;
+        padding: 15px 15px;
+        border-radius: 99990px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        background-color: $paragraph_color;
+}
+
+/* design for hoover animation on each button   */
+@mixin hoverEffect {
+        color: white;   
+        border: 2px solid white;
+}
